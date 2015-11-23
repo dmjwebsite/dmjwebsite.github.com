@@ -20,7 +20,8 @@ $(function()
 	var aRound=$('.round');
 	function fnJump()
 	{	
-		oClock.off('animationend',fnJump);
+		oClock.off('WebkitAnimationend',fnJump);
+		oClock.off('MozAnimationend',fnJump);
 		var index=0;		
 		setInterval(function(){
 			aRound.removeClass('jump');
@@ -33,6 +34,7 @@ $(function()
 		},3000);
 	}
 	oClock.on('WebkitAnimationend',fnJump);
+	oClock.on('MozAnimationend',fnJump);
 	var aLi=$('.clock .nav li');
 	for(var i=0; i<aLi.length-1; i++)
 	{
@@ -62,6 +64,9 @@ $(function()
 					$(this).addClass('beat');
 				});	
 				$(aSpan[index]).on('WebkitAnimationend',function(){
+					$(aSpan[index]).removeClass('beat');
+				});
+				$(aSpan[index]).on('MozAnimationend',function(){
 					$(aSpan[index]).removeClass('beat');
 				});
 			})(i);	
