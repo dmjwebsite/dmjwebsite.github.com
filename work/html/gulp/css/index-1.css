@@ -3,12 +3,12 @@
 
 
 .header{width:100%; background:#cf4646; position:relative;}
-.header .nav{padding:15px 0;display:-webkit-box;}
+.header .nav{padding:15px 0;display:-webkit-box; display:-moz-box; display:-ms-box;}
 .header .nav .title{width:98px;}
 .header .nav .title a{font-size:18px; color:#fff;}
-.header .nav .layout{-webkit-box-flex:1;width:100%; }
-.header .nav .nav-list{ width:540px; display:-webkit-box;}
-.header .nav .nav-list li{-webkit-box-flex:1;}
+.header .nav .layout{-webkit-box-flex:1;width:100%;-moz-box-flex:1;-ms-box-flex:1; }
+.header .nav .nav-list{ width:540px; display:-webkit-box;  display:-moz-box; display:-ms-box;}
+.header .nav .nav-list li{-webkit-box-flex:1; -moz-box-flex:1; -ms-box-flex:1;}
 .header .nav .nav-list li a{color:#fff; font-size:12px;}
 .header .btn{background:url(../images/btn.png) no-repeat; height:34px; width:44px;position:absolute;
 right:5px; top:15px; display:none;}
