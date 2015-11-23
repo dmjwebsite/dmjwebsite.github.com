@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DMJ-WebSite</title>
+	<style>
+	*{padding:0; margin:0; list-style:none;}
+	body{background:#ece3e3;}
+	ul{ width:700px; height:400px; margin:150px auto;}
+	ul li{background:url(images/0.jpg) no-repeat; width:100%; height:100%; position:relative;}
+	input {width:100px; height:30px; text-align:center; line-height:30px; border:1px solid #000; position:absolute; left:100px; top:100px;}
+	</style>
+	<script>
+	function PartMove()
+	{
+		this.oUl=document.querySelector('ul');
+		this.oLi=document.querySelector('ul li');
+		var R=4;
+		var C=7;
+		var W=this.oLi.offsetWidth/C;
+		var H=this.oLi.offsetHeight/R;
+		for(var r=0; r<R; r++)
+		{
+			for(var c=0; c<C; c++)
+			{
+				var oSpan=document.createElement('span');
+				var left=c*W;
+				var top=r*H;
+				oSpan.style.left=left+'px';
+				oSpan.style.top=top+'px';
+				oSpan.style.backgroundImage='url(images/1.jpg)';
+				oSpan.style.backgroundPosition=-left+'px -'+top+'px';
+				oSpan.style.position='absolute';
+				oSpan.style.width=W+'px';
+				oSpan.style.height=H+'px';
+				oSpan.style.opacity=0;
+				this.oLi.appendChild(oSpan);
+			}
+		}
+		this.aSpan=this.oLi.children;
+		this.timer=null;
+		this.iNow=0;
+		this.bFlag=true;
+		var _this=this;
+		this.oUl.onclick=function()
+		{
+			_this.fnClick();
+		};
+		
+	}
+	PartMove.prototype.fnClick=function()
+	{
+		
+		if(!this.bFlag)return;
+		this.bFlag=false;
+		this.iNow++;
+		var i=0;
+		var _this=this;
+		this.timer=setInterval(function(){
+			_this.aSpan[i].style.transition='.5s all ease';
+			_this.aSpan[i].style.opacity=1;
+			i++;
+			if(i==_this.aSpan.length)
+			{
+				clearInterval(_this.timer);
+			}
+		},80);
+		this.aSpan[this.aSpan.length-1].addEventListener('transitionend',function()
+		{
+			_this.bFlag=true;
+			for(var i=0; i<_this.aSpan.length; i++)
+			{
+				_this.aSpan[i].style.opacity=0;
+				_this.aSpan[i].style.transition='none';
+				_this.aSpan[i].style.backgroundImage='url(images/'+(_this.iNow+1)%3+'.jpg)';
+				
+			}
+			_this.oLi.style.backgroundImage='url(images/'+(_this.iNow)%3+'.jpg)';				
+		});
+	}
+	window.onload=function()
+	{
+		new PartMove();
+	};
+
+	</script>
+</head>
+<body>
+	<ul>
+		<li></li>
+	</ul>
+</body>
+</html>

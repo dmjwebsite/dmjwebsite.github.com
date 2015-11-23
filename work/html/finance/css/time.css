@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.g-foot { }
+
+/*----顶部选项卡----*/
+.tab-box { overflow:hidden; height:375px; margin-bottom:12px; }
+.b-img-box,
+.s-img-box { position:relative; height:100%; }
+/*左侧大图*/
+.b-img-box { width:718px; }
+.b-img-box img { display:block; width:100%; }
+.b-img-box .b-img { display:none; }
+.b-img-box .active { display:block; }
+/*右侧小图*/
+.s-img-box { width:370px; }
+.g-top-bar li { display:none; position:relative; height:303px; }
+.g-top-bar .active { display:block; }
+.g-bottom-bar { overflow:hidden; height:72px; }
+.g-bottom-bar li { float:left; }
+/*右侧图片按钮*/
+.g-bottom-bar { padding-left:15px; background:#000; }
+.g-bottom-bar ul { overflow:hidden; padding-top:10px; margin-right:-10px; }
+.g-bottom-bar li { position:relative; float:left; width:104px; height:51px; padding:1px; margin-right:10px; }
+.g-bottom-bar .active { padding:0; border:1px solid #0197e7; }
+.g-bottom-bar img {}
+.g-bottom-bar .active .shadow { display:none; }
+.g-bottom-bar .shadow { position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.6; filter:alpha(opacity:60); }
+
+/*----时间轴----*/
+.time-cont { position:relative; padding-bottom:60px; }
+.time-list-box { position:relative; padding-top:60px; }
+.time-num { position:absolute; left:50%; top:0; z-index:1; width:47px; margin-left:-24px; height:47px; line-height:47px; background:url(../images/time_num_bg.png) no-repeat; color:#fff; text-align:center; font-size:16px; cursor:pointer; }
+.time-list-box .pipe { position:absolute; top:0; left:50%; margin-left:-2px; width:0; height:100%; border-left:1px solid #c0c0c0; border-right:1px solid #c0c0c0; }
+/*列表*/
+.time-list { overflow:hidden; width:1047px; margin:0 auto; }
+.time-list>li { position:relative; width:487px; min-height:322px; margin-bottom:50px; }
+.time-left-bar { float:left; clear:left; margin-top:43px; }
+.time-right-bar { float:right; clear:right; margin-top:70px; }
+
+/*点*/
+.time-list .point { position:absolute; top:14px; width:20px; height:20px; background:url(../images/time_point_bg.png) no-repeat; }
+.time-left-bar .point { right:-46px; }
+.time-right-bar .point { left:-47px; }
+/*时间*/
+.time-list .date { position:absolute; top:-43px; left:0; width:476px; height:43px; line-height:43px; color:#7e7e7e; font-size:18px; }
+.time-list .date span { margin-left:10px; font-size:12px; }
+.time-left-bar .date { text-align:right; }
+.time-right-bar .date { padding-left:12px; }
+/*标题*/
+.time-list .tit { margin-bottom:5px; }
+.time-list .tit p { overflow:hidden; width:442px; height:47px; line-height:47px; white-space:nowrap; text-overflow:ellipsis; }
+.time-left-bar .tit { padding-left:18px; background:url(../images/time_left_bar_bg.png) no-repeat; }
+.time-right-bar .tit { padding-left:27px; background:url(../images/time_right_bar_bg.png) no-repeat; }
+/*大图片*/
+.time-list .big-img { position:relative; display:block; width:472px; border:2px solid #d2d2d2; }
+.time-right-bar .time-img { padding-left:11px; }
+.time-list .big-img img { display:block; width:100%; }
+/*底部图片列表*/
+.time-img .img-list { overflow:hidden; }
+.time-img .img-list li { float:left; border:2px solid #d2d2d2; border-top:none; }
+
+.time-add-more { position:absolute; bottom:0; left:50%; width:146px; margin-left:-74px; height:54px; text-indent:-9999em; background:url(../images/time_add_more.png) no-repeat; cursor:pointer; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

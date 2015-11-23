@@ -1,0 +1,36 @@
+
+.menu {position:fixed; left:50px; top:50px; width:40px; height:39px; padding:10px 5px 0;
+	background:#2b2b2b; border-radius: 3px;}
+.menu p{width:40px; height:3px; background:#fff; margin-bottom:10px;}
+@-webkit-keyframes move{
+	to{transform:translateX(0);}
+}
+.menu-box{width:170px; height:100%; position:fixed; left:0; top:0; background:rgba(0,0,0,0.5);
+font-size:16px; color:#fff; text-align: center;transform:translateX(-170px);padding-top:100px;}
+.menu-box.move{-webkit-animation:1s move ease forwards;}
+.menu-box ul{padding-top:100px;padding:0 10px;}
+.menu-box li{margin-bottom:30px;width:150px; height:52px; overflow: hidden;
+ position:relative;transition:1s all ease; }
+.menu-box li a{margin-bottom:10px;padding-top:10px; color:#fff; display:block;
+	transition:.4s all ease;transform:translateY(-15px); height:100%;}
+.menu-box svg{transition:.4s all ease;  position: absolute;
+  left: 0; top:0;  stroke-dasharray: 350px;
+  stroke-dashoffset: 350px;}
+.menu-box li:hover svg{stroke-dashoffset: 0;}
+.menu-box li:hover a{transform:translateY(5px); color:#00eeff;}
+
+
+
+
+.banner{ width:0px; margin:0 auto 20px; border:44px solid #2b2b2b; border-radius: 26px;
+box-sizing:border-box; text-align: center;position:relative; opacity:0;}
+.banner img{display:block; margin-bottom:50px; opacity:0;}
+.nav{width:0px; height:50px; background:#2b2b2b; margin:0 auto 10px; border-radius: 5px; opacity:0}
+.nav ul{display: -webkit-box;}
+.nav ul li{-webkit-box-flex:1;width:100px; text-align: center; height:50px; 
+	line-height: 50px; font-size:16px; text-shadow:1px 1px 5px #2b2b2b;
+}
+.nav ul li a{color:#fff;}
+
+
+

@@ -1,0 +1,42 @@
+
+.content-box .product-list{overflow:hidden; width:13.15rem;}
+.content-box .product-list ul{width:13.55rem;}
+.content-box .product-list li{margin-right:0.4rem; float:left; text-align: center; margin-bottom:0.85rem;}
+.content-box .product-list li img{width:6.375rem; height:4.525rem; display: block; margin-bottom:0.35rem;}
+.content-box .product-list li .text{color:#000; font-size:0.5rem; display: block; 
+background:url(../images/split.png) no-repeat 2.5rem center,
+url(../images/split.png) no-repeat 3.8rem center;background-size:0.1rem 0.1rem; }
+
+.about-text p{text-indent: 0.8rem; font-size:0.4rem;}
+.league-text p{font-size:0.4rem; line-height: 0.8rem}
+.league-text .indent{text-indent: 0.8rem;}
+.contact-text{padding-left:0.2rem; margin-bottom:1.55rem;}
+.contact-text h4{font-size:0.45rem;color:#cc0f16; font-weight: normal; padding:0.25rem 0 0.55rem;
+border-bottom:1px dotted #cc0f16;margin-bottom:0.35rem;}
+.contact-text ul li{height:1rem; line-height: 1rem; font-size:0.4rem; 
+	background:url(../images/phone.png) no-repeat left center; padding-left:0.85rem; 
+	background-size:0.675rem 0.65rem; }
+.contact-text ul li:nth-child(1){background:url(../images/phone.png) no-repeat left center; 
+	background-size:0.675rem 0.65rem; }
+.contact-text ul li:nth-child(2){background:url(../images/contact_1.png) no-repeat left center;
+	background-size:0.45rem 0.55rem; }
+.contact-text ul li:nth-child(3){background:url(../images/telphone.png) no-repeat left center; 
+background-size:0.35rem 0.525rem; }
+.contact-text ul li:nth-child(4){background:url(../images/email.png) no-repeat left center;
+background-size:0.4rem 0.35rem; }
+.contact-text ul li:nth-child(5){background:url(../images/http.png) no-repeat left center;
+background-size:0.425rem 0.425rem; }
+.contact-text ul li:nth-child(6){background:url(../images/address.png) no-repeat -0.19rem center;  
+background-size:0.775rem 0.875rem; }
+
+.mein-list li{overflow: hidden; height:3.45rem; margin-bottom:0.9rem;}
+.mein-list li img{width:8.75rem; height:3.45rem; margin-right:0.35rem; float:left;}
+.mein-list li i{background:url(../images/arrow.png) no-repeat; background-size:0.275rem 0.45rem;
+display:block; float:left; width:0.275rem; height:0.45rem; margin-right:0.25rem; margin-top:1.5rem;}
+.mein-list li p{float:left;  width:3.375rem; height:3.45rem;}
+.mein-list li:nth-child(1) p{background:url(../images/mein_text_1.png) no-repeat;
+	background-size:3.375rem 3.45rem;}
+.mein-list li:nth-child(2) p{background:url(../images/mein_text_2.jpg) no-repeat;
+	background-size:3.375rem 3.45rem;}
+.mein-list li:nth-child(3) p{background:url(../images/mein_text_3.png) no-repeat;
+	background-size:3.375rem 3.45rem;};

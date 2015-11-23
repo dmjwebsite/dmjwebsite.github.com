@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*--覆盖 common--*/
+.g-head { margin-bottom:0; }
+
+.content-banner b{ position:relative; display:block;background:url(../images/content-bg.png) repeat-x;color:#404040; font-size:16px; height:34px; line-height: 34px; padding-left:24px; font-weight:normal; margin-bottom:10px;}
+.content-banner i { position:absolute; top:0;  width:1px; height:34px; background:url(../images/read_tit.png) no-repeat; }
+.content-banner .problem_left { left:0; }
+.content-banner .problem_right { right:0; }
+/*--本页修饰--*/
+.content-guide{ padding-top:16px; margin-left:1px; margin-bottom:17px; }
+.content-guide h2{ background:url(../images/main_logo.png) no-repeat; text-indent:-99999px; width:132px; height:47px; }
+.content-banner-t b{ display:block; background:url(../images/content-bg.png) repeat-x; color:#404040; font-size:16px; height:34px; line-height: 34px; padding-left:24px; font-weight:normal; margin-bottom:10px; }
+/*平台信息*/
+.content-list { width:1043px; border:1px solid #d2d2d2; overflow:hidden; background:#f8f8f8; padding:18px 0 25px 55px;}
+.message-list { width:1180px;overflow:hidden; }
+.message-list li { float:left; height:40px;  width:400px; line-height:40px;  margin-right:190px; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+
+.message-list strong { margin-right:20px; font-weight:normal;}
+
+
+.content-news{ padding-top:26px; }
+.content-news b{ display:block; background:url(../images/content-bg.png) repeat-x; color:#404040; font-size:16px; height:34px; line-height: 34px; padding-left:24px; font-weight:normal; margin-bottom:10px; }
+.content-hot{ padding:15px 60px; border:1px solid #d2d2d2;  background:#f8f8f8; }
+.content-hot p { margin-bottom:10px; line-height:28px; text-indent:2em; }
+
+/* 相关阅读 */
+.content-msg { padding-top:27px; }
+
+
+.reading-content { border:1px solid #d2d2d2; border-right:none; width:1098px; overflow:hidden; }
+.reading-item { background:#f8f8f8; padding:24px 83px 24px 55px; border-right:1px solid #d2d2d2;  padding-bottom:2000px; margin-bottom:-2000px;  }
+.color-e { background:#eee;}
+.reading-list { padding-bottom:24px;  }
+.reading-list li { height:32px; line-height:32px; width:410px; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;  }
+.reading-list a { padding-left:9px;  background:url(../images/read_point.png) left center no-repeat; }
+
+.reading-list li:hover a { padding-left:9px; color:#4b7ab2; background:url(../images/read_point_active.png) left center no-repeat; }

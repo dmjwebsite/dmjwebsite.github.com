@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0; }
+li{ list-style:none;}
+body{padding-top:100px; background:#ece3e3;}
+#box{ width:747px; height:406px; border:1px solid red; margin:50px auto; overflow:hidden; position:relative; }
+li{ position:absolute; left:0; top:0;  padding-left:20px; }
+span{ position:absolute; left:0; top:0; width:20px; height:100%; color:#fff font-size:20px; line-height:100px;
+background:rgba(255,102,102,0.5);}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function()
+{
+	var aSpan=document.getElementsByTagName('span');
+	var aLi=document.getElementsByTagName('li');
+	var sW=aSpan[0].offsetWidth;
+	var liW=aLi[0].offsetWidth;
+	for(var i=0; i<aLi.length; i++)
+	{
+		if(i != 0)
+		{
+			aLi[i].style.left=liW+(i-1)*sW+'px';
+		}
+	}
+	for(var i=0; i<aSpan.length; i++)
+	{
+		(function(index){
+			aSpan[index].onmouseover=function()
+			{
+				for(var i=0; i<aSpan.length; i++)
+				{
+					if(index<i)
+					{
+						//aLi[i].style.left=liW+(i-1)*sW+'px';
+						move(aLi[i],{left:liW+(i-1)*sW});
+					}
+					else
+					{
+						//aLi[i].style.left=i*sW+'px';
+						move(aLi[i],{left:i*sW});
+					}
+				}
+			};
+		})(i);
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="box">
+    	<ul>
+        	<li>
+            	<span>第一项</span>
+            	<img src="sfq/0.jpg" alt=""/>
+            </li>
+            <li>
+            	<span>第二项</span>
+            	<img src="sfq/1.jpg" alt=""/>
+            </li>
+            <li>
+            	<span>第三项</span>
+            	<img src="sfq/2.jpg" alt=""/>
+            </li>
+            <li>
+            	<span>第四项</span>
+            	<img src="sfq/3.jpg" alt=""/>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

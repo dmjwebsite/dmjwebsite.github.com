@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DMJ-WebSite</title>
+<style>
+* { margin:0; padding:0; }
+input { position:absolute; left:100px; top:50px; width:100px; height:40px; }
+ul { overflow:hidden; width:900px; height:630px; border:2px solid red; margin:10px auto; }
+li { width:280px; height:190px; margin:10px; background:#ccc; float:left; list-style:none; opacity:1; line-height:150px; text-align:center; font-size:50px; font-weight:bold; }
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function (){
+	var aLi=document.getElementsByTagName('li');
+	var w=document.documentElement.clientWidth/2;
+	var h=document.documentElement.clientHeight/2;
+	//  布局转换
+	var aPos=[];
+	for (var i=0; i<aLi.length; i++)
+	{
+		var left=aLi[i].offsetLeft;
+		var top=aLi[i].offsetTop;
+		
+		aLi[i].style.left=left+'px';
+		aLi[i].style.top=top+'px';
+		
+		aPos.push({left:left, top:top});
+	}
+	
+	for (var i=0; i<aLi.length; i++)
+	{
+		aLi[i].style.position='absolute';
+		aLi[i].style.margin=0;
+	}	
+	// 点击
+	var bFlag=false;
+	document.onclick=function (){
+		if(bFlag)return;
+		bFlag=true;
+		var n=0;
+		var timer=setInterval(function (){
+			(function (index){
+				move(aLi[n], {top:h, left:w, width:0, height:0, opacity:0}, {
+					duration:300,
+					complete:function (){
+						if (index == aLi.length-1)
+						{
+							bFlag=false;
+							end();
+						}
+					}
+				});
+			})(n);
+			n++;
+			if (n == aLi.length)
+			{
+				clearInterval(timer);
+			}
+		}, 100);
+	};
+	
+	function end()
+	{
+		var n=aLi.length-1;
+		var timer=setInterval(function (){
+			var left=aPos[n].left;
+			var top=aPos[n].top;
+			move(aLi[n], {left:left, top:top, width:280, height:190, opacity:1}, {
+				duration:300
+			});
+			n--;
+			if (n == -1)
+			{
+				clearInterval(timer);
+			}
+		}, 100);
+	}
+};
+</script>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<a href="3D/index.html">
+				<img src="images/1.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="apple/index.html">
+				<img src="images/2.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="bomb/index.html">
+				<img src="images/3.jpg" alt="">
+			</a>
+		</li>
+		
+		<li>
+			<a href="jsonp/index.html">
+				<img src="images/4.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="lagou/index.html">
+				<img src="images/5.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="Object-oriented/imgDelay.html">
+				<img src="images/6.jpg" alt="">
+			</a>
+		</li>
+		
+		<li>
+			<a href="photowall/index.html">
+				<img src="images/7.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="reverse/index.html">
+				<img src="images/8.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<a href="sfq/index.html">
+				<img src="images/9.jpg" alt="">
+			</a>
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

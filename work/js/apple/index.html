@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DMJ-WebSite</title>
+<style>
+* { margin:0; padding:0; }
+body { padding-top:100px; text-align:center; background:#ece3e3;}
+div { position:absolute; bottom:0; left:0; width:100%; text-align:center; }
+img { width:64px; height:64px; }
+</style>
+<script>
+window.onload=function()
+{
+	var aImg=document.getElementsByTagName('img');
+	var aInput=document.getElementsByTagName('input');
+	document.onmousemove=function(ev)
+	{
+		var oEvent=ev||event;
+		for(var i=0; i<aImg.length; i++)
+		{
+			var json=getPos(aImg[i]);
+			var a=oEvent.clientX-json.left-aImg[i].offsetWidth/2;
+			var b=oEvent.clientY-json.top-aImg[i].offsetHeight/2;
+			var c=Math.sqrt(a*a+b*b);
+			var cur=(1-c/500).toFixed(2);
+			(cur<0.5) && (cur=0.5);
+			aImg[i].style.width=cur*128+'px';
+			aImg[i].style.height=cur*128+'px';
+		}
+		
+	};
+	
+	function getPos(obj)
+	{
+		var left=0;
+		var top=0;
+		while(obj)
+		{
+			left+=obj.offsetLeft;
+			top+=obj.offsetTop;
+			obj=obj.offsetParent;
+		}
+		return {left:left,top:top};
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="div1">
+		<img src="apple/1.png" />
+		<img src="apple/2.png" />
+		<img src="apple/3.png" />
+		<img src="apple/4.png" />
+		<img src="apple/5.png" />
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

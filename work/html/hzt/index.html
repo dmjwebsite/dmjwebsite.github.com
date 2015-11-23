@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/16+'px';
+		var oBtnUl=document.querySelector('.btn-box ul');
+		var oBtn=document.querySelector('.btn');
+		var bFlag=false;
+		var aLi=oBtnUl.children;
+		oBtn.addEventListener('touchstart',function(){
+			if(bFlag==false)
+			{
+				oBtnUl.style.display='block';
+			}else
+			{
+				oBtnUl.style.display='none';
+			}
+			bFlag=!bFlag;
+		},false)
+		for(var i=0; i<aLi.length; i++)
+		{
+			aLi[i].addEventListener('touchstart',function(){
+				for(var i=0; i<aLi.length; i++)
+				{
+					aLi[i].classList.remove('on');
+				}
+				this.classList.add('on');
+			},false)
+		}
+	},false);
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<h1>华之腾</h1>
+			<p class="name">华之腾有限公司</p>
+			<div class="btn-box">
+				<a href="javascript:;" class="btn"></a>
+				<ul>
+					<li class="on">
+						<a href="index.html">
+						首页
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+						公司简介
+						</a>
+					</li>
+						<li>
+						<a href="product.html">
+						产品展示
+						</a>
+					</li>
+						<li>
+						<a href="mein.html">
+						资质荣誉
+						</a>
+					</li>
+						<li>
+						<a href="league.html">
+						加盟政策
+						</a>
+					</li>
+						<li>
+						<a href="contact.html">
+						联系我们
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section>
+			<div class="banner">
+				<a href="javascript:;"><img src="images/banner_1.jpg"></a>
+			</div>
+		</section>
+		<nav>
+			<ul>
+				<li>
+					<a href="about.html">
+						<i></i>
+						<p>关于我们</p>
+					</a>
+				</li>
+				<li>
+					<a href="product.html">
+						<i></i>
+						<p>产品展示</p>
+					</a>
+				</li>
+				<li>
+					<a href="mein.html">
+						<i></i>
+						<p>企业风采</p>
+					</a>
+				</li>
+				<li>
+					<a href="league.html">
+						<i></i>
+						<p>加盟我们</p>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<i></i>
+						<p>联系我们</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<section>
+			<div class="title">
+				<h3>
+					关于我们
+				</h3>
+			</div>
+			<div class="content-box">
+				<div class="about">
+					<img src="images/about.jpg">
+					<div class="text">
+						<p>华之腾集团有限公司坐落于江、浙、沪交界的嘉善县经济开发区，占地约13亩，建筑面积10000多平方米。博鸿居是华之腾集团旗下的红木家具品牌。</p>
+						<p>嘉善者，既美且善，嘉其所善，人杰地灵。博鸿居集天时、地利、人和
+							<a href="javascript:;">【详情】</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h3>
+					产品展示
+				</h3>
+			</div>
+			<div class="content-box">
+				<div class="product">
+					<ul>
+						<li>
+							<a href="javascript:;" class="product-img">
+								<img src="images/product.jpg">
+							</a>
+							<p>
+								<a href="javascript:;">条案</a>
+							</p>
+						</li>
+						<li>
+							<a href="javascript:;" class="product-img">
+								<img src="images/product.jpg">
+							</a>
+							<p>
+								<a href="javascript:;">条案</a>
+							</p>
+						</li>
+						<li>
+							<a href="javascript:;" class="product-img">
+								<img src="images/product.jpg">
+							</a>
+							<p>
+								<a href="javascript:;">条案</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="title">
+				<h3>
+					企业风采
+				</h3>
+			</div>
+			<div class="content-box">
+				<div class="mein">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<img src="images/mein_1.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="images/mein_2.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<ul>
+				<li>
+					<a href="javascript:;">首页</a>
+				</li>
+				<li><a href="javascript:;">联系电话</a></li>
+				<li><a href="javascript:;">地址导航</a></li>
+				<li><a href="index.html">返回</a></li>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>

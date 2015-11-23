@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.top .top_tit{font-size:12px; color:#666;}
+.top .top_tit a{color:#666; margin-top:3px; margin-right:6px;}
+.top .top_cont{width:978px; border:1px solid #eee; position:relative;}
+.top_cont_tit{border-bottom:1px solid #eee; padding-left:218px;}
+.top_cont_tit h2{font-size:18px; color:#333; height:58px;  line-height:58px;}
+.top_cont_tit span{width:239px; height:59px; background:url(../images/imgpic.png) no-repeat;}
+.top_cont ul{padding:8px 0 15px 218px; font-size:12px; border-bottom:1px solid #eee; margin:0 20px;}
+.top_cont li{line-height:25px;}
+.top_cont li span{color:#999; margin-right:17px;}
+.top_cont li p{color:#666; width:350px;}
+.top_cont li a{background:url(../images/imgpic2.png) no-repeat; width:37px; height:37px; margin-right:17px;}
+.top_cont .top_pos{width:170px; height:238px; padding:2px; border:1px solid #eee; position:absolute; left:20px; top:15px;}
+.top_cont .top_pos img{width:170px; height:238px;}
+.top_cont_txt{padding:0 20px 13px 20px;}
+.top_cont_txt h3{font-size:14px; color:#666; margin:15px 0;}
+.top_cont_txt p{color:#999; font-size:12px; line-height:20px;}
+.detail_list .list_time{font-size:12px; height:24px; line-height:24px;}
+.detail_list .list_time span{color:#999; margin-top:2px;}
+.detail_list .list_time li{color:#666; border:none;border-right:1px solid #eee; padding:0 6px 0 8px; height:14px;line-height:14px; margin-top:5px;}
+.detail_page{padding:50px 248px;}
+.detail_page a{padding:5px 10px; border:1px solid #eee; margin-right:5px; color:#2bb8aa;}
+
+.detail_list_tit{height:43px; line-height:43px; border-bottom:1px solid #ddd;}
+.detail_list_tit h4{font-size:14px; padding:0 16px; border-left:1px solid #ddd; border-right:1px solid #ddd; margin-left:-1px; color:#2bb8aa;}
+.detail_list_tit h4.active{border-top:3px solid #2bb8aa; margin-top:-1px; color:#666; background:#fff; height:42px;}
+.detail_list_cont li{font-size:12px; padding:8px 0 6px 0; border-bottom:1px dotted #eee;}
+.detail_list_cont li span{color:#333;margin-right:8px;}
+.detail_list_cont li a{color:#666; padding:4px 5px 3px 5px; margin-right:20px;}
+.detail_list_cont li a.active{background:#2bb8aa; color:#fff; border-radius:4px;}
+.detail_list_cont li a:hover{background:#2bb8aa; color:#fff; border-radius:4px;}
+.detail_list_cont li div{width:560px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

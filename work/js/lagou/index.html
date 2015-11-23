@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DMJ-WebSite</title>
+<style>
+*{ margin:0; padding:0;}
+body{display:-webkit-box; -webkit-box-pack:center;padding-top:200px; background:#ece3e3;}
+.box{ width:250px; height:200px; float:left; margin:10px; position:relative; overflow:hidden; }
+img { width:100%; height:100%; }
+.pos{ width:250px; height:200px; text-align:center;background:rgba(123,123,432,0.5); position:absolute; left:0; top:400px;}
+.pos p{ font-size:25px; color:#fff; line-height: 200px;}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function()
+{
+	var aDiv=document.getElementsByClassName('box');
+	for(var i=0; i<aDiv.length; i++)
+	{
+		enter(aDiv[i]);
+		leave(aDiv[i]);
+	}
+	function enter(oDiv)
+	{
+		var oPos=oDiv.getElementsByClassName('pos')[0];
+		oDiv.onmouseenter=function(ev)
+		{
+			var oEvent=ev || event;
+			var n=getN(oDiv,oEvent);
+			switch(n)
+			{
+				case 0:
+					oPos.style.left='250px';
+					oPos.style.top=0;
+					break;
+				case 1:
+					oPos.style.left=0;
+					oPos.style.top='200px';
+					break;
+				case 2:
+					oPos.style.left='-250px';
+					oPos.style.top=0;
+					break;
+				case 3:
+					oPos.style.left=0;
+					oPos.style.top='-200px';
+					break;
+			}
+			move(oPos,{left:0,top:0});
+		};
+	}
+	function leave(oDiv)
+	{
+		var oPos=oDiv.getElementsByClassName('pos')[0];
+		oDiv.onmouseleave=function(ev)
+		{
+			var oEvent=ev || event;
+			var n=getN(oDiv,oEvent);
+			switch(n)
+			{
+				case 0:
+					var left=250;
+					var top=0;
+					break;
+				case 1:
+					var left=0;
+					var top=200;
+					break;
+				case 2:
+					var left=-250;
+					var top=0;
+					break;
+				case 3:
+					var left=0;
+					var top=-200;
+					break;
+			}
+			move(oPos,{left:left,top:top});
+		};
+	}
+};
+function getN(obj,ev)
+{
+	var x=obj.offsetWidth/2-ev.clientX+obj.offsetLeft;
+	var y=obj.offsetHeight/2-ev.clientY+obj.offsetTop;
+	return Math.round((d2a(Math.atan2(y,x))+180)/90)%4;
+};
+function d2a(d)
+{
+	return d*180/Math.PI;
+}
+</script>
+</head>
+
+<body>
+	<div class="box">
+    	<img src="images/0.jpg" alt=""/>
+        <div class="pos">
+            <p>作品展示</p>
+        </div>
+    </div>
+    <div class="box">
+    	<img src="images/1.jpg" alt=""/>
+        <div class="pos">
+            <p>客片欣赏</p>
+        </div>
+    </div>
+    <div class="box">
+    	<img src="images/2.jpg" alt=""/>
+        <div class="pos">
+            <p>场景介绍</p>
+        </div>
+    </div>
+    <div class="box">
+    	<img src="images/3.jpg" alt=""/>
+        <div class="pos">
+            <p>礼服展示</p>
+        </div>
+    </div>
+</body>
+</html>

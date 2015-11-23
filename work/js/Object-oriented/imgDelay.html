@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DMJ-WebSite</title>
+	<style>
+	*{margin:0; padding:0; list-style:none;}
+	body{background:#ece3e3;}
+	ul{width:996px; overflow:hidden; margin:50px auto;}
+	ul li{width:310px; height:400px; border:1px solid red; float:left; margin:10px;}
+	ul li img{width:310px; height:400px;}
+	</style>
+	<script>
+	function ImgDelay()
+	{
+		this.aLi=document.querySelectorAll('ul li');
+		this.scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
+		this.clientHeight=document.documentElement.clientHeight;
+		this.h=this.scrollTop+this.clientHeight;
+		this.changeSrc();
+	
+	};
+	ImgDelay.prototype.changeSrc=function()
+	{
+		for(var i=0; i<this.aLi.length; i++)
+		{
+			var top=this.aLi[i].offsetTop;
+			if(this.h>top-50)
+			{
+				this.aLi[i].children[0].src=this.aLi[i].children[0].getAttribute('_src');
+			}
+		}
+	}
+	window.onload=window.onscroll=window.onresize=function()
+	{
+		new ImgDelay();
+	};
+	</script>
+</head>
+<body>
+	<ul>
+		<li><img _src="images/m1.jpg"></li>
+		<li><img _src="images/m2.jpg"></li>
+		<li><img _src="images/m3.jpg"></li>
+		<li><img _src="images/m4.jpg"></li>
+		<li><img _src="images/m5.jpg"></li>
+		<li><img _src="images/m6.jpg"></li>
+		<li><img _src="images/m7.jpg"></li>
+		<li><img _src="images/m8.jpg"></li>
+		<li><img _src="images/m9.jpg"></li>
+		<li><img _src="images/m10.jpg"></li>
+	</ul>
+</body>
+</html>

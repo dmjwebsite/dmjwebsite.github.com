@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0; padding:0;}
+	body{width:100%; height:100%; overflow-x: hidden; background:#ece3e3;}
+	section .js-content .photo-wall { width:618px; height:618px; border:1px solid red; margin:10px auto;}
+	section .js-content .photo-wall li { position:relative; float:left; list-style:none; width:206px; height:206px;
+  }
+	section .js-content .photo-wall img { display:block; width:100%; }
+	</style>
+	<script src="../../../js/base.js"></script>
+	<script src="../../../js/jquery-1.7.2.js"></script>
+	<script>
+	//照片墙
+	(function (){
+		var zIndex=1;
+		var aLi=null;
+		var aPos=[];
+		
+		$(function (){
+			aLi=$('.js-content .photo-wall li');
+			// 布局转换
+			aLi.each(function (){
+				aPos.push({
+					left:$(this).offset().left,
+					top:$(this).offset().top
+				});
+			});
+			
+			aLi.each(function (index){
+				$(this).attr('data-index', index);
+				$(this).css({
+					left:aPos[index].left+'px',
+					top:aPos[index].top+'px',
+					position:'absolute',
+					margin:0
+				});
+			});
+			// 拖拽
+			aLi.drag();
+		});
+		
+		$.fn.drag=function (){
+			this.each(function (){
+				var oLi=$(this);
+				oLi.mousedown(function (ev){
+					var oNear=null;
+					$(this).css('z-index', zIndex++);
+					var disX=ev.clientX-oLi.offset().left;
+					var disY=ev.clientY-oLi.offset().top;
+					$(document).mousemove(move);
+					$(document).mouseup(up);
+					function move(ev)
+					{
+						oLi.css({
+							left:ev.clientX-disX+'px',
+							top:ev.clientY-disY+'px'
+						});
+						
+						// 找最近
+						oNear=findNear(oLi);
+					}
+					
+					function up()
+					{
+						$(document).unbind('mousemove', move);
+						$(document).unbind('mouseup', up);
+						
+						// 换位置
+						if (oNear)
+						{
+							
+							oNear.stop().animate(aPos[oLi.attr('data-index')]);
+							
+							oLi.stop().animate(aPos[oNear.attr('data-index')]);
+							oNear.removeClass('active');
+							
+							// 换下标
+							var tmp=oNear.attr('data-index');
+							oNear.attr('data-index', oLi.attr('data-index'));
+							
+							oLi.attr('data-index', tmp);
+						}
+						else
+						{
+							
+							var index=oLi.attr('data-index');
+							oLi.stop().animate(aPos[index]);
+						}
+					}
+					
+					return false;
+				});
+			});
+		};
+		
+		function findNear(obj)
+		{
+			var nMin=99999;
+			var nMinIndex=-1;
+			
+			aLi.each(function (index){			
+				if(aLi[index] != obj[0])
+				{
+					if (collTest(obj, aLi.eq(index)))
+					{
+						var dis=getDis(obj, aLi.eq(index));
+						if (dis < nMin)
+						{
+							nMin=dis;
+							nMinIndex=index;
+						}
+					}
+				}
+			});
+			
+			if (nMinIndex == -1)
+			{
+				return null;
+			}
+			else
+			{
+				return aLi.eq(nMinIndex);
+			}
+		}
+		
+		function collTest(obj1, obj2)
+		{
+			var l1=obj1.offset().left;
+			var r1=l1+obj1.width();
+			var t1=obj1.offset().top;
+			var b1=t1+obj1.height();
+			
+			var l2=obj2.offset().left;
+			var r2=l2+obj2.width();
+			var t2=obj2.offset().top;
+			var b2=t2+obj2.height();
+			
+			if (l2>r1 || l1>r2 || t2>b1 || t1>b2)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	})();
+	</script>
+</head>
+<body>
+	<section>
+		<div class="js-content">
+			<ul class="photo-wall">
+				<li><img src="images/photowall3.jpg" /></li>
+				<li><img src="images/photowall4.jpg" /></li>
+				<li><img src="images/photowall7.jpg" /></li>
+				
+				<li><img src="images/photowall6.jpg" /></li>
+				<li><img src="images/photowall2.jpg" /></li>
+				<li><img src="images/photowall1.jpg" /></li>
+				
+				<li><img src="images/photowall9.jpg" /></li>
+				<li><img src="images/photowall8.jpg" /></li>
+				<li><img src="images/photowall5.jpg" /></li>
+			</ul>
+		</div>	
+	</section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+/*维度划分 checkbox*/
+.plat-item{padding-bottom:30px;}
+.plat-item .plat-item-tip span{ background:url(../images/plat_normal.png) no-repeat right center; padding-right:22px;}
+.plat-item .plat-item-tip span.check{ background:url(../images/plat_active.png) no-repeat right center;margin-right:18px;}
+.item-checkbox dt{ padding-top:4px;}
+.item-checkbox dt,
+.item-checkbox dd { float:left; }
+.item-checkbox dt { padding-right:20px;}
+.item-checkbox dd { width:858px; }
+.item-checkbox b { position:absolute; top:7px; left:0;  width:12px; height:12px; background:url(../images/normal.png) left center no-repeat; }
+.item-checkbox a { position:relative; padding:4px 30px 4px 20px; float:left; }
+.item-checkbox a.active b { background-image:url(../images/active.png); }
+
+/*列表tit部分*/
+.plat{ margin-bottom:24px;}
+.plat .plat-tit { background:url(../images/paltbg.png) repeat-x;font-size:16px; color:#404040; font-weight:normal;padding:6px 0 12px 30px; margin-bottom:11px;}
+/*公共部分*/
+.plat-cont{ overflow:hidden;}
+.plat-cont ul{ width:1076px; padding:21px 0px 4px 21px; border:1px solid #d2d2d2; }
+.plat-cont li{ margin-bottom:24px; margin-right:27px; width:226px; height:118px;background:url(../images/plat_cont_bg_1.png) no-repeat 8px 8px;position:relative; text-align:center; padding:8px; float:left;}
+.plat-cont li.active{ background:url(../images/plat_cont_bg.png) no-repeat;}
+.plat-cont li:hover{ background:url(../images/plat_cont_bg.png) no-repeat;}
+.plat-cont li div{color:#fff;}
+.plat-cont li h4{color:#2178b9; font-size:20px; background:url(../images/plat_tit_bg.png) no-repeat 1px 1px; height:32px; width:180px; overflow:hidden; padding: 5px 22px; line-height:32px;}
+.plat-cont .plat-scale{ background:url(../images/scale_bg.png) no-repeat 1px 1px; height:43px; line-height:43px; padding-left:50px; overflow:hidden; width:220px;}
+.plat-cont .plat-scale-txt{ margin-right:21px;}
+.plat-cont .plat-scale-num{ font-size:28px;}
+.plat-cont .plat-count-txt{ color:#404040; font-size:12px; line-height:31px; width:226px; height:32px; overflow:hidden;}
+.plat-cont .plat-count-txt .acolor{ color:#2279ba;}
+.plat-cont li i{ background:url(../images/plat_normal.png) no-repeat; width:14px; height:17px; position:absolute; right:16px; top:14px; }
+.plat-cont li.comment i{ background:url(../images/plat_active.png) no-repeat;}
+
+

@@ -1,0 +1,57 @@
+*{margin:0; padding:0; list-style:none;}
+html{font-size:20px;}
+header{height:2.35rem; background:#262626; padding:0.4rem; box-sizing:border-box; display:-webkit-box;
+border-bottom:0.1rem solid #49caac}
+header h1{background:url(../images/logo.png) no-repeat; width:1.6rem; height:1.4rem;
+background-size:cover;
+}
+header h1,header .pc a{width:1.6rem; height:1.4rem;display:block;}
+header .name{font-size:1.2rem; text-align:center; color:#fff; -webkit-box-flex:1;}
+header .pc{background:url(../images/pc.png) no-repeat; width:1.6rem; height:1.4rem;
+background-size:cover;}
+.login{height:1.75rem; background:#fcfcfc; -box-sizing:border-box; 
+	font-size:0.8rem; padding:0.35rem 0;
+}
+.login ul{display:-webkit-box;}
+.login ul li{-webkit-box-flex:1;line-height:1.75rem; padding-left:3.45rem;}
+.login ul li a{color:#85888f;}
+.login li.login-text{background:url(../images/login.png) no-repeat 0.6rem 0.3rem; 
+	background-size:1.45rem;
+	border-right:2px solid #e0e0e0;
+}
+.login li.register{background:url(../images/register.png) no-repeat 0.6rem 0.3rem; 
+	background-size:1.45rem;
+}
+.banner{width:16rem; height:7.8rem; position:relative; }
+.banner img{width:16rem; height:7.8rem;}
+.banner .banner-text{width:16rem; height:1.85rem;text-align:center; line-height: 1.85rem;
+background:rgba(0,0,0,0.5); position:absolute;left:0; bottom:0; color:#fff;
+}
+.news{width:16rem; padding:0 0.4rem; box-sizing:border-box; margin-top:-1px;}
+.news li{height:2rem; line-height:2rem; color:#222; border-top:1px solid #ebebeb;
+padding:0 0.25rem;}
+.content{ border-top:0.1rem solid #57c0af;}
+.content .title{height:2rem; background:#fafafa; padding:0 0.75rem; line-height:2rem;
+ display:-webkit-box; border-bottom:0.05rem solid #e2e2e2;}
+.content .title .message{background:url(../images/message.png) no-repeat 2rem 0.3rem;
+	background-size:1.45rem; height:2rem; -webkit-box-flex:1;}
+.content .title p{-webkit-box-flex:1;}
+.content nav{height:2.05rem; line-height:2.05rem;border-bottom:0.05rem solid #e2e2e2;}
+.content nav ul{overflow:hidden;}
+.content nav ul li{ width:1.7rem;padding:0 0.75rem; float:left;}
+.content nav ul li a{color:#323232;}
+.content nav ul li.active{border-bottom:0.15rem solid #d43553; margin-top:-0.05rem;}
+.content .text .news-detail{padding:0 0.7rem; margin-bottom:0.8rem;}
+.content .text .news-detail h3{height:2rem; font-weight:normal; line-height:2rem;}
+.content .text .news-detail div{display:-webkit-box;}
+.content .text .news-detail div img{width:5.25rem; height:3.75rem; margin-right:0.72rem;}
+.content .text .news-detail div p{-webkit-box-flex:1; font-size:0.65rem; color:#888c8f; 
+	line-height:1.25rem;}
+.bottom{height:3rem; background:#fafafa; text-align:center; line-height:3rem;
+border-bottom:0.1rem solid #57c0af; color:#86858a;}
+footer.login{background:#262626;}
+footer.login .login-text{background:url(../images/pc.png) no-repeat 1.6rem 0.3rem; 
+	background-size:1.45rem; border-right:2px solid #666;}
+footer.login .register{background:url(../images/phone.png) no-repeat 2.3rem 0.3rem; 
+	background-size:0.65rem 1.15rem;
+}

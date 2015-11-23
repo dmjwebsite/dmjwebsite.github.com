@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*----重置----*/
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul { margin: 0; padding: 0 }
+body { overflow-x: hidden; background:#fff; }
+li { list-style: none; }
+a { text-decoration: none; }
+a:active { background:none; }
+a img { display: block; border: none; }
+input:focus { outline: 0 none transparent; }
+input::-ms-clear { display:none; }
+input, textarea { background:none; border:none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*----公共样式----*/
+body { border-top:5px solid #4f4f4f; font-size:14px; font-family: \5FAE\8F6F\96C5\9ED1; }
+body, a, a:active { color:#404040; }
+a:hover { color:#386fad; }
+/*装所有东西的大盒子*/
+.g-box { width: 1100px; margin: 0 auto; }
+.clearfix:after { display: block; height: 0; content: "."; clear: both; visibility: hidden; }
+.left { float: left; }
+.right { float: right; }
+
+/*----公共头----*/
+.g-head { padding-top:22px; margin-bottom:40px; }
+/*logo*/
+#logo { overflow:hidden; position:relative; width:408px; height:40px; margin-top:10px;  }
+#logo a { display:block; height:100%; background:url(../images/global_bg.png) no-repeat -1px -28px; }
+.g-head .logo-box { margin-bottom:24px; }
+/*用户&搜索框*/
+.g-head .user { margin-bottom:19px; text-align:right; }
+.g-head .user span { padding:0 10px; }
+.g-head .reg { color:#0d6fb8; }
+.g-head .search { position:relative; width:205px; height:26px; background:url(../images/global_bg.png) no-repeat; }
+.g-head .placeholder,
+.g-head .txt { position:absolute; top:0; left:0; width:160px; padding-left:12px; }
+.g-head .txt { height:22px; line-height:22px; padding-top:4px; }
+.g-head .placeholder { height:26px; line-height:26px; }
+.g-head .placeholder { z-index:1; }
+.g-head .sub { position:absolute; right:0; top:0; width:33px; height:26px; cursor:pointer; text-indent:-9999em; }
+/*导航*/
+.g-head .m-nav { border-bottom:4px solid #bfbfbf; }
+.g-head .nav-list { margin-left:13px; }
+
+.g-head .nav-item { position:relative; z-index:99; float:left; width:178px; height:44px; line-height:44px; margin-right:1px; background-color:#3a3a3a; text-align:center; font-size:16px; }
+.g-head .nav-list .cur,
+.g-head .nav-list .active { height:48px; line-height:48px; margin-top:-4px; background-color:#386fad; }
+.g-head .active .sub-nav { display:block; }
+.g-head .nav-item>a { display:block; width:100%; height:100%; color:#fff; }
+.g-head .sub-nav { display:none; position:absolute; top:52px; top:48px; left:0; width:100%; background-color:#ececec; border-top:4px solid #bfbfbf;;  }
+.g-head .sub-nav li { border:1px solid #c2c2c2; border-top:none; }
+.g-head .sub-nav a { display:block; height:100%; color:#404040; }
+.g-head .sub-nav a:hover { color:#386fad; background-color:#f9f9f9; }
+/*面包屑*/
+.g-head .m-crumb { height:50px; line-height:50px; }
+.g-head .m-crumb a, 
+.g-head .m-crumb span { float:left; }
+.g-head .m-crumb .pipe { padding:0 10px; }
+.g-head .m-crumb.active { border-bottom:1px dashed #a0a0a0; }
+
+/*----公共尾----*/
+.g-foot { margin-top:80px; }
+.g-foot,
+.g-foot a { color:#fff; }
+.g-foot .t-bd { padding:40px 80px; background-color:#404040; }
+/*友情链接*/
+.foot-friend-link { overflow:hidden; width:452px; }
+.foot-friend-link dt { padding-bottom:14px; margin-bottom:10px; border-bottom:1px dashed #a0a0a0; }
+.foot-friend-link dd { overflow:hidden; margin-right:-50px; }
+.foot-friend-link a { float:left; height:30px; line-height:30px; margin-right:50px; font-size:12px; }
+/*底部导航*/
+.foot-nav { overflow:hidden; width:302px; margin-left:80px; }
+.foot-nav ul { overflow:hidden; margin-right:-48px; }
+.foot-nav li { float:left; height:40px; line-height:40px; margin-right:48px; }
+/*分享*/
+.g-foot .share { overflow:hidden; }
+.g-foot .share a { float:left; width:32px; height:26px; margin-right:12px; text-indent:-9999em; background:url(../images/global_bg.png) no-repeat; }
+.g-foot .share .weibo { background-position:-217px -2px; }
+.g-foot .share .weixin { background-position:-260px -2px; }
+.g-foot .copyright { height:48px; line-height:48px; text-align:center; background-color:#d7d7d7; color:#4f4f4f; font-size:12px; }
+/*----公共中间----*/
+.g-main { }
+
+/*----公共模块----*/
+/*图片下的半透明层*/
+.m-detail-box { position:absolute; bottom:0; left:0; width:100%; }
+.m-detail-shadow { position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.5; filter:alpha(opacity:50); }
+.m-detail-txt { position:relative; z-index:1; padding:12px 25px; line-height:25px; font-size:16px; color:#fff; }
+
+
+
+
+
+
+

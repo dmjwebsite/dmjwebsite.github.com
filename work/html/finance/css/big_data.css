@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*----大数据页----*/
+/*维度划分 checkbox*/
+.item-checkbox dt,
+.item-checkbox dd { float:left; }
+.big-data-checkbox .item-checkbox dt { padding-right:20px;/*height:47px;*/  }
+.big-data-checkbox .item-checkbox dd { width:1010px; }
+.item-checkbox b { position:absolute; top:7px; left:0;  width:12px; height:12px; background:url(../images/normal.png) left center no-repeat; }
+.item-checkbox a { position:relative; padding:4px 30px 4px 20px; float:left; }
+.item-checkbox a.active b { background-image:url(../images/active.png); }
+
+/*表格*/
+.big-data-table { table-layout:fixed; width:1100px; border:1px solid #dedddd; margin-top:34px;}
+.big-data-table tr { height:38px; }
+.big-data-table tr.odd { background:#f5f5f5; }
+.big-data-table tr.even { background:#fff; }
+.big-data-table th { border-bottom:1px solid #e2e1e1; }
+.big-data-table td { border-bottom:1px dashed #e2e1e1; text-align:center; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.big-data-table td.hot { background:url(../images/data_red.png) center center no-repeat; color:#fff; }
+.big-data-table td.ordinary { background:url(../images/data_blue.png) center center no-repeat;color:#fff; }
+
+.tr-title { background:#fff;}
+.tr-title strong {  font-weight:normal; }
+.tr-title a span {width:12px; height:7px; display:inline-block;background:url(../images/data_icon.png) left center no-repeat; }
+.tr-title .up { background-image:url(../images/data_icon.png);}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+.content { padding-top:24px; width:768px; }
+.sub-menu{ width:766px; border:1px solid #d2d2d2; }
+.content-msg{ padding-top:24px;  }
+.content-msg p{ background:url(../images/content-bg.png) repeat-x; text-align:center; font-size:14px; height:34px; line-height:34px; margin-bottom:10px; }
+.content-list{ overflow:hidden; border:1px solid #d2d2d2; }
+.content-msg ul{ width:780px; background:#f8f8f8; padding-top:20px; padding-bottom:20px; }
+.content-msg ul li{ width:155px; text-align:center; float:left; line-height:48px;  }
+
+.sidebar{ padding-top:24px; width:312px; }
+.list p{ background:url(../images/content-bg.png) repeat-x; padding-left:15px;  font-size:14px; height:34px; line-height:34px; margin-bottom:10px; }
+.list ul{ border-top:1px solid #d2d2d2; }
+.list ul li{ border-left:1px solid #d2d2d2; border-bottom:1px solid #d2d2d2; border-right:1px solid #d2d2d2; overflow:hidden; padding-left:26px; padding-right:26px; padding-top:12px; height:75px; }
+.list ul li a{ float:left; width:140px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+.list ul li span{ float:right; background:url(../images/fire.png) no-repeat 0 3px; padding-left:19px; overflow:hidden;  width:97px; }
+.list ul li i{ float:left; font-style:normal; padding-top:5px; line-height:22px; padding-bottom:5px;  }
+.banner { border:1px solid #d2d2d2; margin-top:25px;  }
+.banner img{ width:310px; height:193px;display:block;  }
+
+.content-hot{ padding-top:40px; padding-bottom:28px; }
+.content-tab{ padding-bottom:45px; position:relative; }
+.item-checkbox{ margin-left:45px; }
+.item-checkbox dt,
+.item-checkbox dd { float:left; }
+.item-checkbox dt { padding-right:20px;  }
+.item-checkbox dd { width:574px; }
+.item-checkbox b { position:absolute; top:7px; left:0;  width:12px; height:12px; background:url(../images/normal.png) left center no-repeat; }
+.item-checkbox i{ position:absolute; top:10px; right:5px;  width:16px; height:16px; background:url(../images/lit_l.png) no-repeat 0; }
+.item-checkbox a { position:relative; padding:4px 30px 4px 20px; float:left; }
+.item-checkbox a.active b { background-image:url(../images/active.png); }
+
+.pos{ width:553px; border:1px solid #d2d2d2; position:absolute; top:25px; right:145px; background:#fff; overflow :hidden; }
+.pos ul { margin-left:40px; margin-top:25px; width:560px; }
+.pos ul>li{ float:left; margin-right:25px; margin-bottom:18px; }
+.pos ul>li span{ float:left; background:url(../images/normal.png) no-repeat 0 5px; width:16px; height:19px;  }
+.item-checkbox .pos ul>li a{ float:left; padding:0; padding-left:15px;  }
+
+
+
+
+

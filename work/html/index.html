@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DMJ-WebSite-Html</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{  text-align:center; overflow: hidden}
+.box{width:1000px; margin:0 auto;  height:100%; padding-top:10px;}
+#ul1{ width:520px; height:358px; position:absolute; left:50%; top:50%; margin-left:-260px; margin-top:-179px; }
+#ul1 li{ width:100%; height:100%; position:absolute; left:0; top:0; background:#399; color:#fff; font-size:50px; text-align:center; line-height:300px; font-weight:bold; font-family:微软雅黑; border:1px solid #ccc; opacity:0; -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); transition:.5s all cubic-bezier(0.79, 2.59, 0.74, 0.25);  transform:perspective(800px) translateX(0px) rotateY(0deg);}
+#ul1 li img{width:520px; height:358px;}
+#ul1 li.l2{ opacity:0; transform:perspective(1200px) translateX(-280px) rotateY(60deg); z-index:1;}
+#ul1 li.l1{ opacity:0.8; transform:perspective(1200px) translateX(-220px) rotateY(60deg); z-index:2;}
+#ul1 li.cur{ opacity:1; z-index:5;}
+#ul1 li.r1{ opacity:0.8;transform:perspective(1200px) translateX(220px) rotateY(-60deg); z-index:2;}
+#ul1 li.r2{ opacity:0;transform:perspective(1200px) translateX(280px) rotateY(-60deg); z-index:1;}
+.left{background:url(../../images/prev.jpg) no-repeat; width:100px; height:50px; position: absolute;left:200px; top:80px; z-index: 2;}
+.right{background:url(../../images/next.jpg) no-repeat; width:100px; height:50px; position: absolute;right:200px; top:80px; z-index: 2;}
+</style>
+<script>
+window.onload=function(){
+	var oLeft=document.querySelector('.left');	
+	var oRight=document.querySelector('.right');
+	var aLi=document.querySelectorAll('#ul1 li');
+	
+	//存class
+	var aClass=[];
+	for(var i=0; i<aLi.length; i++){
+		aClass[i]=aLi[i].className;
+	}
+	
+	function tab(){
+		for(var i=0; i<aLi.length; i++){
+			aLi[i].className=aClass[i];
+		}	
+	}
+	
+	//左边
+	oLeft.onclick=function(){
+		aClass.unshift(aClass.pop());	
+		
+		tab();
+	};
+	
+	//右面
+	oRight.onclick=function(){
+		aClass.push(aClass.shift());	
+		
+		tab();
+	};
+};
+</script>
+</head>
+
+<body>
+	<div class="box">
+		<p class="left"></p>
+		<p class="right"></p>
+		<ul id="ul1">
+			<li class="l2">
+				<a href="finance/html/time.html" >
+					<img src="../../images/work_list1.jpg" alt="">
+				</a>
+			</li>
+		    <li class="l1">
+				<a href="meituan/index.html" >
+					<img src="../../images/work_list2.jpg" alt="">
+				</a>
+		    </li>
+		    <li class="cur">
+				<a href="mnls/index.html" >
+					<img src="../../images/work_list5.jpg" alt="">
+				</a>
+		    </li>
+		    <li class="r1">
+				<a href="music/index.html" >
+					<img src="../../images/work_list4.jpg" alt="">
+				</a>
+		    </li>
+		    <li class="r2">
+				<a href="hao360/index.html" >
+					<img src="../../images/work_list3.jpg" alt="">
+				</a>
+		    </li>
+		    <li>
+				<a href="wangyi/index.html" >
+					<img src="../../images/work_list6.jpg" alt="">
+				</a>
+		    </li>
+		</ul>
+	</div>
+</body>
+</html>
