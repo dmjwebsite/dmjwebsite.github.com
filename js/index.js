@@ -32,7 +32,7 @@ $(function()
 			}
 		},3000);
 	}
-	oClock.on('animationend',fnJump);
+	oClock.on('WebkitAnimationend',fnJump);
 	var aLi=$('.clock .nav li');
 	for(var i=0; i<aLi.length-1; i++)
 	{
@@ -61,7 +61,7 @@ $(function()
 				$(aSpan[i]).mouseover(function(){
 					$(this).addClass('beat');
 				});	
-				$(aSpan[index]).on('animationend',function(){
+				$(aSpan[index]).on('WebkitAnimationend',function(){
 					$(aSpan[index]).removeClass('beat');
 				});
 			})(i);	

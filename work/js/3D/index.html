@@ -2,12 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>智能社-http://www.zhinengshe.com</title>
+<title>DMJ-website</title>
 <style>
 *{ margin:0; padding:0; list-style:none;}
 body{ background:#ece3e3;}
-#ul1{ width:133px; height:200px;position:absolute; left:50%; margin-left:-67px; top:200px; transform:perspective(1200px) rotateX(-10deg); transform-style:preserve-3d;}
-#ul1 li{ position:absolute; left:0; top:0; width:100%; height:100%; background:url(img1/7.jpg) no-repeat; transition:1s all ease; border-radius:8px; box-shadow:0 0 10px 2px #fff;
+#ul1{ width:133px; height:200px;position:absolute; left:50%; margin-left:-67px; top:200px; 
+	-webkit-transform:perspective(1200px) rotateX(-10deg); -webkit-transform-style:preserve-3d;}
+#ul1 li{ position:absolute; left:0; top:0; width:100%; height:100%; background:url(img1/7.jpg) no-repeat; 
+	-webkit-transition:1s all ease; border-radius:8px; box-shadow:0 0 10px 2px #fff;
 	-webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5));
 }
 </style>
@@ -23,13 +25,13 @@ window.onload=function(){
 		
 		(function(oLi,index){
 			setTimeout(function(){
-				oLi.style.transform='rotateY('+360/N*index+'deg) translateZ(350px)';
+				oLi.style.WebkitTransform='rotateY('+360/N*index+'deg) translateZ(350px)';
 			},200*(N-index));
 		})(oLi,i);
 	}
 	var aLi=oUl.children;
 	//最后一个
-	aLi[0].addEventListener('transitionend',function(){
+	aLi[0].addEventListener('WebkitTransitionend',function(){
 		change();
 	},false);
 	
@@ -50,7 +52,7 @@ window.onload=function(){
 	
 	function change(){
 		for(var i=0; i<aLi.length; i++){
-			aLi[i].style.transform='rotateY('+(360/N*i+y)+'deg) translateZ(350px)';
+			aLi[i].style.WebkitTransform='rotateY('+(360/N*i+y)+'deg) translateZ(350px)';
 			
 			var d=Math.abs((360/N*i+y)%360);
 			if(d>180)d=360-d;

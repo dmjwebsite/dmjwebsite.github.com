@@ -3,16 +3,16 @@ body{background:url(../images/bg.jpg) no-repeat -88px center; overflow: hidden; 
 	height:0; background-size:contain; margin:100px auto; opacity:0;
 	-webkit-animation:1s rotation linear forwards; position:relative;}
 @-webkit-keyframes beat{
-	0{transform:translateY(0);}
-	50%{transform:translateY(-100px);}
-	100%{transform:translateY(0);}
+	0{-webkit-transform:translateY(0);}
+	50%{-webkit-transform:translateY(-100px);}
+	100%{-webkit-transform:translateY(0);}
 }
 @-webkit-keyframes rotation{
-	to{width:440px; height:440px; opacity:1; transform:rotate(360deg);}
+	to{width:440px; height:440px; opacity:1; -webkit-transform:rotate(360deg);}
 }
 @-webkit-keyframes fadeInOut{
-	50%{opacity:0.5; transform:scale(1.2);}
-	100%{opacity:0; transform:scale(1.5);}
+	50%{opacity:0.5; -webkit-transform:scale(1.2);}
+	100%{opacity:0; -webkit-transform:scale(1.5);}
 }
 .clock .tick span.beat{-webkit-animation:.4s beat cubic-bezier(0.92, 0.26, 0.11, 1.13);}
 .clock .round{width:30px; height:30px; background:rgba(255,255,255,0.3); position:absolute; 
@@ -32,13 +32,13 @@ font-size:50px; color:#fff;text-align:center; line-height:300px; opacity:1;}
 .clock .nav li img{width:58px; height:58px; opacity:0;}	
 .clock .nav li p img{width:116px; margin-left:-30px; opacity:0;}
 @-webkit-keyframes fillOutLi{
-	to{transform:scale(2);}
+	to{-webkit-transform:scale(2);}
 }
 @-webkit-keyframes fillOutImg{
 	to{opacity:1;}
 }
 @-webkit-keyframes fillOutPImg{
-	to{opacity:1; transform:translateY(-60px);}
+	to{opacity:1; -webkit-transform:translateY(-60px);}
 }
 .clock .nav li:hover div{-webkit-animation:.3s fillOutLi linear forwards;} 
 .clock .nav li:hover img{-webkit-animation:.3s fillOutImg linear forwards;}
@@ -48,7 +48,7 @@ font-size:50px; color:#fff;text-align:center; line-height:300px; opacity:1;}
 .btn{position:fixed; right:50px; top:50px; cursor:pointer;  width:40px; height:40px;}
 .btn p{width:40px; height:3px; margin-bottom:10px; background:#fff; opacity:0.8;}
 @-webkit-keyframes rock{
-	to{transform:translateX(5px);}
+	to{-webkit-transform:translateX(5px);}
 }
 .btn p.rock{-webkit-animation:.3s rock cubic-bezier(0.16, 0.35, 0.38, 1.1);}
 
@@ -60,25 +60,25 @@ width:25px; height:25px;}
 .layer .layerout{width:1110px; margin:0 auto;  height:100%;overflow:hidden; }
 .layer .layerout ul{width:1120px;overflow:hidden; padding-left:30px; height:100%;}
 .layer .layerout ul li{text-align: center; cursor:pointer; margin-right:60px; float:left;
-transform:translateY(-350px); transition:1s all cubic-bezier(0.16, 0.35, 0.38, 1.1); forwards;}
+-webkit-transform:translateY(-350px); -webkit-transition:1s all cubic-bezier(0.16, 0.35, 0.38, 1.1) forwards;}
 @-webkit-keyframes fall{
-	to{transform:translateY(160px)}
+	to{-webkit-transform:translateY(160px)}
 }
 @-webkit-keyframes rFall{
-	to{transform:rotate(360deg)}
+	to{-webkit-transform:rotate(360deg)}
 }
 @-webkit-keyframes shaking{
-	25%{transform:translateX(-20px);}
-	50%{transform:translateX(0);}
-	75%{transform:translateX(20px);}
-	100%{transform:translateX(0);}
+	25%{-webkit-transform:translateX(-20px);}
+	50%{-webkit-transform:translateX(0);}
+	75%{-webkit-transform:translateX(20px);}
+	100%{-webkit-transform:translateX(0);}
 }
 .layer .layerout ul li.fall{-webkit-animation:.6s fall linear forwards;}
 .layer .layerout ul li p.rFall{-webkit-animation:.6s rFall cubic-bezier(0, 0.63, 0.79, 0.26);}
 .layer .layerout ul li a{color:#fff;}
 .layer .layerout ul li p{margin:30px 0;}
 .layer .layerout ul li div{width:160px; height:160px; border-radius: 50%; overflow: hidden;}
-.layer .layerout ul li div img{width:160px; height:160px; transition:0.5s all ease;}
+.layer .layerout ul li div img{width:160px; height:160px; -webkit-transition:0.5s all ease;}
 .layer .layerout ul li:hover div{box-shadow:0 0 10px 20px rgba(233,233,233,0.6);}
 .layer .layerout ul li:hover p{-webkit-animation:.6s shaking linear forwards;}
 
